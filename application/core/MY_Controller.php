@@ -12,20 +12,34 @@ class MY_Controller extends CI_Controller {
         }
         $this->load->database();
         if(!$this->input->is_cli_request())
-            $this->load->library('session');      
+            $this->load->library('session');
         $this->load->driver('cache', array('adapter' => 'file'));
     }
     function _head(){
         $this->load->config('opentutorials');
-        $this->load->view('head');        
+        $this->load->view('head');
     }
     function _sidebar(){
         if ( ! $topics = $this->cache->get('topics')) {
-            $topics = $this->topic_model->gets();    
+            $topics = $this->topic_model->gets();
             $this->cache->save('topics', $topics, 300);
         }
-        $this->load->view('topic_list', array('topics'=>$topics));
-    }
+        $this->load->view('list_topic', array('topics'=>$topics));
+      }
+
+        //----------- study용 sidebar--------------------------------수정중------------//
+
+
+            function _sidebar_study(){
+                if ( ! $topics = $this->cache->get('topics')) {
+                    $topics = $this->topic_model->gets();
+                    $this->cache->save('topics', $topics, 300);
+                }
+                $this->load->view('list_study', array('topics'=>$topics));
+            }
+
+
+
     function _footer(){
         $this->load->view('footer');
     }
