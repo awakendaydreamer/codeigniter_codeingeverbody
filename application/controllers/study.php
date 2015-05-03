@@ -15,6 +15,25 @@ class Study extends MY_Controller {
 
         $this->_footer();
     }
+
+
+
+    function english(){
+      $this->_head();
+      $this->_sidebar_study();
+      $this->load->view('/study/english');
+      $this->_footer();
+
+    }
+
+    function english_1(){
+      $this->_head();
+      $this->_sidebar_study();
+      $this->load->view('/study/english1');
+      $this->_footer();
+    }
+
+
     function get($id){
         log_message('debug', 'get 호출');
         $this->_head();
@@ -98,6 +117,57 @@ class Study extends MY_Controller {
 
             $data = $this->upload->data();
             $filename = $data['file_name'];
-          }
+
+            $url = '/static/user/'.$filename;
+
+            echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction('".$CKEditorFuncNum."', '".$url."', '전송에 성공 했습니다')</script>";
         }
-      }
+    }
+
+    function upload_receive(){
+        // 사용자가 업로드 한 파일을 /static/user/ 디렉토리에 저장한다.
+        $config['upload_path'] = './static/user';
+        // git,jpg,png 파일만 업로드를 허용한다.
+        $config['allowed_types'] = 'gif|jpg|png';
+        // 허용되는 파일의 최대 사이즈
+        $config['max_size'] = '100';
+        // 이미지인 경우 허용되는 최대 폭
+        $config['max_width']  = '1024';
+        // 이미지인 경우 허용되는 최대 높이
+        $config['max_height']  = '768';
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload("user_upload_file"))
+        {
+            echo $this->upload->display_errors();
+        }
+        else
+        {
+            $data = array('upload_data' => $this->upload->data());
+            echo "성공";
+            var_dump($data);
+        }
+    }
+    function upload_form(){
+        $this->_head();
+        $this->_sidebar();
+        $this->load->view('upload_form');
+        $this->_footer();
+    }
+    function economy(){
+      $this->_head();
+      $this->_sidebar_study();
+      $this->load->view('study/economy');
+      $this->_footer();
+    }
+    function management(){
+      $this->load->database();
+      $this->load->model('Management_model');
+      $data=$this->management_model->gets();
+      $this->_head();
+      $this->_sidebar_study();
+      $this->load->view('study/management');
+      $this->_footer();
+    }
+}
+?>

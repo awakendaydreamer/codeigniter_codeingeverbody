@@ -1,5 +1,5 @@
 <div class="span2">
-	<ul class="nav nav-tabs nav-stacked">
+	<ul class="nav nav-bar">
 	<?php
 	foreach($topics as $entry){
 	?>

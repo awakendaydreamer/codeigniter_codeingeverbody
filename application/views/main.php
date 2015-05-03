@@ -5,8 +5,9 @@ $conn = mysqli_connect('localhost','root','tjdghk2q');
 mysqli_select_db($conn,"opentutorials");
 $result = mysqli_query($conn,'SELECT * FROM economy');
 
+
  ?>
-<table border=2px;>
+<table border=1px;>
 
 
   <thead>
@@ -22,14 +23,13 @@ $result = mysqli_query($conn,'SELECT * FROM economy');
       <th>ch8</th>
       <th>CH9</th>
       <th>CH10</th>
-      <th>CH11</th>
     </tr>
   </thead>
   <tbody>
       <?foreach($result as $listitem):?>
       <tr>
 
-        <td><button type="button" name="button"><?=$listitem['id']?></button></td>
+        <td><?=$listitem['nickname']?></td>
         <td>
           <div class="btn-group" role="group">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">

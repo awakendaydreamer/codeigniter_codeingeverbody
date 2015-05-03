@@ -1,9 +1,8 @@
 <div class="span10" class="container-fluid">
 토픽메인
 <?php
-$conn = mysqli_connect('localhost','root','tjdghk2q');
-mysqli_select_db($conn,"opentutorials");
-$result = mysqli_query($conn,'SELECT * FROM economy');
+
+
 
  ?>
 

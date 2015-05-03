@@ -3,7 +3,7 @@
 <?php
 $conn = mysqli_connect('localhost','root','tjdghk2q');
 mysqli_select_db($conn,"opentutorials");
-$result = mysqli_query($conn,'SELECT * FROM economy');
+$result = mysqli_query($conn,'SELECT * FROM taxlaw');
 
  ?>
 

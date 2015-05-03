@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1430511086;s:3:"ttl";i:300;s:4:"data";a:9:{i:0;O:8:"stdClass":4:{s:2:"id";s:1:"1";s:5:"title";s:13:"JavaScript란";s:11:"description";s:691:"<h2>
+a:3:{s:4:"time";i:1430619152;s:3:"ttl";i:300;s:4:"data";a:11:{i:0;O:8:"stdClass":4:{s:2:"id";s:1:"1";s:5:"title";s:13:"JavaScript란";s:11:"description";s:691:"<h2>
     자바스크립트는</h2>
 <ul>
   <li>
@@ -146,5 +146,297 @@ echo json_encode($userinfo);
 ";s:7:"created";s:19:"2015-04-29 14:16:05";}i:4;O:8:"stdClass":4:{s:2:"id";s:2:"24";s:5:"title";s:19:"뭐지 왜안나와";s:11:"description";s:64:"본문에 내요ㅗㅇ이 없는것인가? 그건아닌듯한데";s:7:"created";s:19:"2015-04-30 14:04:44";}i:5;O:8:"stdClass":4:{s:2:"id";s:2:"27";s:5:"title";s:3:"asd";s:11:"description";s:12:"<p>asd</p>
 ";s:7:"created";s:19:"2015-05-02 03:01:10";}i:6;O:8:"stdClass":4:{s:2:"id";s:2:"28";s:5:"title";s:3:"asd";s:11:"description";s:12:"<p>asd</p>
 ";s:7:"created";s:19:"2015-05-02 03:01:14";}i:7;O:8:"stdClass":4:{s:2:"id";s:2:"29";s:5:"title";s:2:"ww";s:11:"description";s:12:"<p>asd</p>
-";s:7:"created";s:19:"2015-05-02 03:01:19";}i:8;O:8:"stdClass":4:{s:2:"id";s:2:"30";s:5:"title";s:3:"asd";s:11:"description";s:12:"<p>asd</p>
-";s:7:"created";s:19:"2015-05-02 03:01:24";}}}
+";s:7:"created";s:19:"2015-05-02 03:01:19";}i:8;O:8:"stdClass":4:{s:2:"id";s:2:"33";s:5:"title";s:17:"2015년05월02일";s:11:"description";s:252:"<p>홈페이지PROJECT시작한지 6일째이다&nbsp;</p>
+
+<p>codeigniter, bootstrap 을 이용해서 홈페이지를 만드는데 너무 어렵다..</p>
+
+<p>몇일 안남았는데 완성도가 너무 떨어진다!! 꼭 만들어 낼꺼다!!</p>
+";s:7:"created";s:19:"2015-05-02 10:20:02";}i:9;O:8:"stdClass":4:{s:2:"id";s:2:"34";s:5:"title";s:4:"test";s:11:"description";s:112:"<p><img alt="" src="/static/user/images_(2).jpg" style="height:194px; width:259px" />열심히 달리자!!</p>
+";s:7:"created";s:19:"2015-05-02 11:08:34";}i:10;O:8:"stdClass":4:{s:2:"id";s:2:"39";s:5:"title";s:9:"트리거";s:11:"description";s:6300:"<p><a href="http://forum.falinux.com/zbxe/?document_srl=566230"><strong>[MySQL]트리거&nbsp;사용법</strong></a></p>
+
+<p>&nbsp;</p>
+
+<p>이번&nbsp;시간에는&nbsp;MySQL트리거&nbsp;사용법에&nbsp;대해서&nbsp;알아보도록&nbsp;하겠습니다.</p>
+
+<p>&nbsp; &nbsp;</p>
+
+<ul>
+	<li>
+	<p>CREATE TRIGGER문법</p>
+	</li>
+</ul>
+
+<p>CREATE</p>
+
+<p>[DEFINER = { user | CURRENT_USER }]</p>
+
+<p>TRIGGER trigger_name trigger_time trigger_event</p>
+
+<p>ON tbl_name FOR EACH ROW trigger_body</p>
+
+<ul>
+	<li>
+	<p>설명</p>
+	</li>
+</ul>
+
+<ol>
+	<li>
+	<p>DEFINER</p>
+
+	<ol>
+		<li>
+		<p>DEFINER&nbsp;조항은&nbsp;트리거&nbsp;활성화&nbsp;시간에&nbsp;액세스&nbsp;권한을&nbsp;확인할&nbsp;때&nbsp;사용되는&nbsp;보안&nbsp;컨텍스트를&nbsp;결정합니다.</p>
+		</li>
+	</ol>
+	</li>
+	<li>
+	<p>trigger_time</p>
+
+	<ol>
+		<li>
+		<p>trigger_time는&nbsp;트리거&nbsp;동작&nbsp;시간입니다.트리거가&nbsp;수정되는&nbsp;각&nbsp;행의&nbsp;앞&nbsp;또는&nbsp;뒤에&nbsp;활성화한다는것을&nbsp;가리킨다&nbsp;앞&nbsp;또는&nbsp;뒤에이&nbsp;될&nbsp;수&nbsp;있습니다.</p>
+		</li>
+	</ol>
+	</li>
+	<li>
+	<p>trigger_event</p>
+
+	<ol>
+		<li>
+		<p>INSERT</p>
+
+		<ol>
+			<li>
+			<p>새&nbsp;행이&nbsp;테이블에&nbsp;삽입될&nbsp;때마다&nbsp;트리거가&nbsp;활성화됩니다.</p>
+			</li>
+		</ol>
+		</li>
+		<li>
+		<p>UPDATE</p>
+
+		<ol>
+			<li>
+			<p>행을&nbsp;수정할&nbsp;때마다&nbsp;트리거가&nbsp;활성화됩니다.</p>
+			</li>
+		</ol>
+		</li>
+		<li>
+		<p>DELETE</p>
+
+		<ol>
+			<li>
+			<p>행이&nbsp;테이블에서&nbsp;삭제됩니다&nbsp;때마다&nbsp;트리거가&nbsp;활성화됩니다.</p>
+			</li>
+		</ol>
+		</li>
+	</ol>
+	</li>
+	<li>
+	<p>trigger_body</p>
+
+	<ol>
+		<li>
+		<p>트리거가&nbsp;활성화&nbsp;될때&nbsp;실행할&nbsp;수&nbsp;있는&nbsp;구문을&nbsp;기술.</p>
+		</li>
+	</ol>
+	</li>
+</ol>
+
+<ul>
+	<li>
+	<p>DB&nbsp;만들기</p>
+
+	<ul>
+		<li>
+		<p>mysql에&nbsp;root권한으로&nbsp;접속후,&nbsp;테스트&nbsp;데이터베이스를&nbsp;만들고, User를&nbsp;만듭니다.</p>
+		</li>
+		<li>
+		<p>mysql -u아이디&nbsp;-p</p>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<p>create database test;</p>
+
+<p>use test;</p>
+
+<p>grant all privileges on test.* to test@localhost identified by &#39;test&#39; with grant option;</p>
+
+<p>[실행화면]</p>
+
+<p><img alt="" src="http://cfile2.uf.tistory.com/image/123D5D3B4F793A69347874" style="height:auto" /></p>
+
+<p>&nbsp; &nbsp;</p>
+
+<ul>
+	<li>
+	<p>예제&nbsp;테이블&nbsp;만들기</p>
+
+	<ul>
+		<li>
+		<p>mysql -utest -ptest로&nbsp;접속한다.&nbsp;그다음&nbsp;아래의&nbsp;명령문을&nbsp;실행한다.</p>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<p>use test;</p>
+
+<p>CREATE TABLE test1(a1 INT);</p>
+
+<p>CREATE TABLE test2(a2 INT);</p>
+
+<p>CREATE TABLE test3(a3 INT NOT NULL AUTO_INCREMENT PRIMARY KEY);</p>
+
+<p>CREATE TABLE test4(</p>
+
+<p>a4 INT NOT NULL AUTO_INCREMENT PRIMARY KEY,</p>
+
+<p>b4 INT DEFAULT 0</p>
+
+<p>);</p>
+
+<p>[실행화면]</p>
+
+<p><img alt="" src="http://cfile9.uf.tistory.com/image/165D1A394F793A69059DF1" style="height:auto" /></p>
+
+<p>&nbsp; &nbsp;</p>
+
+<ul>
+	<li>
+	<p>트리거&nbsp;만들기</p>
+	</li>
+</ul>
+
+<ol>
+	<li>
+	<p>트리거&nbsp;이름&nbsp;&quot;testref&quot;이고, test1테이블의&nbsp;Insert후&nbsp;트리거를&nbsp;동작</p>
+
+	<ol>
+		<li>
+		<p>test2테이블&nbsp;a2에&nbsp;test1에&nbsp;추가한a1을&nbsp;넣어&nbsp;Insert를&nbsp;함.</p>
+		</li>
+		<li>
+		<p>test3테이블&nbsp;test1에&nbsp;추가한a1값과&nbsp;같은&nbsp;데이터를&nbsp;지움.</p>
+		</li>
+		<li>
+		<p>test4테이블&nbsp;a4와&nbsp;test1에&nbsp;추가한a1이&nbsp;같으면&nbsp;b4에&nbsp;1을&nbsp;더한다.</p>
+		</li>
+	</ol>
+	</li>
+</ol>
+
+<p>delimiter |</p>
+
+<p>&nbsp;</p>
+
+<p>CREATE TRIGGER testref BEFORE INSERT ON test1</p>
+
+<p>FOR EACH ROW BEGIN</p>
+
+<p>INSERT INTO test2 SET a2 = NEW.a1;</p>
+
+<p>DELETE FROM test3 WHERE a3 = NEW.a1;</p>
+
+<p>UPDATE test4 SET b4 = b4 + 1 WHERE a4 = NEW.a1;</p>
+
+<p>END;</p>
+
+<p>|</p>
+
+<p>&nbsp;</p>
+
+<p>delimiter ;</p>
+
+<p>[실행화면]</p>
+
+<p><img alt="" src="http://cfile23.uf.tistory.com/image/2035D9434F793A692B6603" style="height:auto" /></p>
+
+<p>&nbsp; &nbsp;</p>
+
+<ul>
+	<li>
+	<p>test3테이블에&nbsp;초기&nbsp;데이터&nbsp;Insert</p>
+	</li>
+</ul>
+
+<p>INSERT INTO test3 (a3) VALUES</p>
+
+<p>(NULL), (NULL), (NULL), (NULL), (NULL),</p>
+
+<p>(NULL), (NULL), (NULL), (NULL), (NULL);</p>
+
+<ul>
+	<li>
+	<p>test4테이블에&nbsp;초기&nbsp;데이터&nbsp;Insert</p>
+	</li>
+</ul>
+
+<p>INSERT INTO test4 (a4) VALUES</p>
+
+<p>(0), (0), (0), (0), (0), (0), (0), (0), (0), (0);</p>
+
+<ul>
+	<li>
+	<p>test1테이블에&nbsp;데이터&nbsp;Insert</p>
+	</li>
+</ul>
+
+<p>INSERT INTO test1 VALUES</p>
+
+<p>(1), (3), (1), (7), (1), (8), (4), (4);</p>
+
+<p>[실행화면]</p>
+
+<p><img alt="" src="http://cfile3.uf.tistory.com/image/1450A5384F793A691935A6" style="height:auto" /></p>
+
+<p>&nbsp; &nbsp;</p>
+
+<p>&nbsp; &nbsp;</p>
+
+<ul>
+	<li>
+	<p>결과&nbsp;확인</p>
+	</li>
+</ul>
+
+<p>select * from test1;</p>
+
+<p>&nbsp;[실행화면]</p>
+
+<p>&nbsp;<img alt="" src="http://cfile25.uf.tistory.com/image/11686E374F793A6A33F0B5" style="height:auto" /></p>
+
+<p>&nbsp; &nbsp;</p>
+
+<p>select * from test2;</p>
+
+<p>&nbsp;[실행화면]</p>
+
+<p><img alt="" src="http://cfile24.uf.tistory.com/image/143F663A4F793A6A038781" style="height:auto" /></p>
+
+<p>&nbsp; &nbsp;</p>
+
+<p>select * from test3;</p>
+
+<p>[실행화면]&nbsp;</p>
+
+<p>&nbsp;<img alt="" src="http://cfile2.uf.tistory.com/image/1855B43B4F793A6A0EFFAC" style="height:auto" /></p>
+
+<p>&nbsp; &nbsp;</p>
+
+<p>select * from test4;</p>
+
+<p>[실행화면]</p>
+
+<p><img alt="" src="http://cfile6.uf.tistory.com/image/123BFB404F793A6A1FA1A7" style="height:auto" /></p>
+
+<p>어떤가요?&nbsp;트리거에&nbsp;정의했던데로&nbsp;값들이&nbsp;바뀌어&nbsp;있죠!</p>
+
+<p>트리거의&nbsp;사용&nbsp;방법에&nbsp;대해서&nbsp;조금은&nbsp;알것&nbsp;같죠!</p>
+
+<p>오늘은&nbsp;여기&nbsp;까지&nbsp;입니다.</p>
+
+<p>감사합니다.</p>
+";s:7:"created";s:19:"2015-05-02 15:06:32";}}}

@@ -25,19 +25,18 @@ class MY_Controller extends CI_Controller {
             $this->cache->save('topics', $topics, 300);
         }
         $this->load->view('list_topic', array('topics'=>$topics));
-      }
+    }
 
-        //----------- study용 sidebar--------------------------------수정중------------//
+//----------- study용 sidebar--------------------------------수정중------------//
 
 
-            function _sidebar_study(){
-                if ( ! $topics = $this->cache->get('topics')) {
-                    $topics = $this->topic_model->gets();
-                    $this->cache->save('topics', $topics, 300);
-                }
-                $this->load->view('list_study', array('topics'=>$topics));
-            }
-
+    function _sidebar_study(){
+        if ( ! $topics = $this->cache->get('topics')) {
+            $topics = $this->topic_model->gets();
+            $this->cache->save('topics', $topics, 300);
+        }
+        $this->load->view('list_study', array('topics'=>$topics));
+    }
 
 
     function _footer(){
